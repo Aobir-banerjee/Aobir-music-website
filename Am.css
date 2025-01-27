@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #1db954;
+}
+
+/* Track Details Section */
+.track-details-section {
+    background-color: rgba(37, 37, 37, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 40px;
+}
+
+.track-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.track-cover {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.track-meta {
+    max-width: 500px;
+    text-align: left;
+}
+
+.track-meta h2 {
+    font-size: 2rem;
+    color: #1db954;
+    margin-bottom: 10px;
+}
+
+.track-meta p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #e5e5e5;
+}
+
+/* Spotify Frame Container */
+.spotify-frame-container {
+    margin-top: 20px; /* Space above the iframe */
+    margin-bottom: 20px; /* Space below the iframe */
+    border-radius: 12px;
+    overflow: hidden; /* Ensures the border-radius applies properly */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Adds some depth */
+}
+
+
+/* Album Tracks Section */
+.album-tracks-section {
+    background-color: rgba(37, 37, 37, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 40px; /* Add space above this section */
+}
+
+.album-tracks-section h2 {
+    font-size: 2rem;
+    color: #1db954;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Spacing between items */
+    justify-items: center;
+    padding: 10px;
+}
+
+.album-item {
+    background-color: rgba(18, 18, 18, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.album-item img {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.album-item h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #e5e5e5;
+    transition: color 0.3s ease;
+}
+
+.album-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.album-item a:hover h3 {
+    color: #1db954;
+}
+
+/* Song List Section */
+.album-songs-section {
+    background-color: rgba(18, 18, 18, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 40px; /* Add space below this section */
+}
+
+
+.album-songs-section h2 {
+    font-size: 2rem;
+    color: #1db954;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.song-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+.song-item {
+    background-color: rgba(37, 37, 37, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.song-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #1db954;
+}
+
+.song-item p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #e5e5e5;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(18, 18, 18, 0.9);
+    text-align: center;
+    padding: 10px 0;
+    color: #b5b5b5;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .album-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Platform Icons */
+.platform-icons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.platform-icons a img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.platform-icons a img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
